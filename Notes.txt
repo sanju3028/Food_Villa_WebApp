@@ -1,0 +1,52 @@
+jsx expressions must have only one parent element, so we cannot have two tags in that. may be we can wrap that two tags into one div tag and can give div tag to jsx,now it works. But here when seeing structure in console, we can see that we got one div extra. we don't want that extra div. So here, "React.Fragment" will be be useful.   
+
+React.Fragment is a component that is exported by react.
+
+Jsx can only have one parent. suppose we want two parents, we can use extra div or compnent React.Fragment COMING FROM REACT LIBRARY. React.Fragment is just like a empty tag.  to make our work ease, we can also write
+
+ 1:<>  code </>
+ 2:<React.Fragment> code </React.Fragment>  
+ both are ways to solve jsx issues.
+
+ 2 ways to write css for jsx things, we can write inline css, with small syntax change, we should pass js object.there itself, or we should give classname and write styles in css page. or we can give style using external libraries like tailwind,material ui, bootstrap
+
+
+ can we use React.Fragment inside a React.Fragment???
+
+ we cannot give styling to React.Fragment because it does not exist, so we give then to div in different ways like inline or normal style-sheet way.
+
+config-driven UI : 
+in real-time large websites, different areas have different offers, we should display the website like that, config helps in that, it is backend thing.
+
+optional chaining: 
+
+diff between map and for each
+
+es6 {... array case} spreadoperator
+
+virtual dom : we will keep representation of our dom with us in our code is called virtual dom. we need v-dom because of reconciliation. react does it. 
+
+reconciliation: react uses  algorithm  called diff, to find out difference between trees(actual dom and virtual dom) to update what is not updated. so, only that part is updated. whole page will not be rendered again.
+
+in react, each child of same parent, they should have unique keys to identify them.
+
+React Fiber : read about it. inversion 16, it is introduced. it is reconciliation engine responsible for diff.
+
+why we don't use index as a key ?
+
+Never use index as your key in react. unless we don't have anything unique value to give as key.
+
+we can do the project with standard defined files only, but in case of big projects we should maintain readability of code, so we divide parts into different files and folders. and necessarily import and export them as required.
+
+we should export the  module or piece of code, to be import into another one.
+
+two ways to export:
+1:- export default Title(component name); we can only export one thing by using this. in some hacky way, we can wrap many things into one parent and can export that. direct import style can be used.
+
+2:- export  const Title(name),  another way to export. for importing, {name } this format is done. we can write name export to multiple things and we can import them once {one,two etc..}
+
+read about import and export in detail
+
+../config  why using ..
+
+every component in react toprid
